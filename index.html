@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Розрахунок вартості проекту</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,700&display=swap&subset=cyrillic-ext"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <main class="calc-wrapper">
+      <div class="container">
+        <form id="form">
+          <div class="heading">
+            <h1 class="heading-title">Калькулятор вартості ремонту</h1>
+            <p class="heading-desc">Базова ціна: 1 м² = 6 тис. гривень</p>
+          </div>
+
+          <!-- Площа -->
+          <div class="calc-section">
+            <label
+              class="checkbox-wrapper title-bold section-title .section-title--vertical-center"
+            >
+              <span class="title__inline">Площа квартири:</span>
+              <input
+                type="number"
+                min="0"
+                max="200"
+                value="50"
+                id="square-input"
+                class="title__inline input-short"
+              />
+              <span class="title__inline">м²</span>
+            </label>
+            <input
+              type="range"
+              id="square-range"
+              class="range-input"
+              min="0"
+              max="200"
+              value="50"
+              step="1"
+            />
+          </div>
+          <!-- // Площа -->
+
+          <!-- Мобілна адаптивність -->
+          <div class="calc-section">
+            <h4 class="checkbox-wrapper title-bold section-title">
+              Тип ремонту
+            </h4>
+            <label class="radio-wrapper" data-name="mobile">
+              <input type="radio" class="radio" name="type" value="1" />
+              <div class="title-lite">Косметичний</div>
+            </label>
+            <label class="radio-wrapper" data-name="mobile">
+              <input
+                type="radio"
+                class="radio"
+                name="type"
+                value="1.3"
+                checked
+              />
+              <div class="title-lite">
+                Капітальний
+                <span class="note">+30% до вартості</span>
+              </div>
+            </label>
+            <label class="radio-wrapper" data-name="mobile">
+              <input type="radio" class="radio" name="type" value="1.5" />
+              <div class="title-lite">
+                Під ключ
+                <span class="note">+50% до вартості</span>
+              </div>
+            </label>
+          </div>
+          <!-- // Мобілна адаптивність -->
+
+          <!-- Мобілна адаптивність -->
+          <div class="calc-section">
+            <label class="checkbox-wrapper title-bold section-title">
+              Тип будинку
+            </label>
+            <label class="radio-wrapper">
+              <input
+                type="radio"
+                class="radio"
+                name="building"
+                value="1"
+                checked
+              />
+              <div class="title-lite">Новобудова</div>
+            </label>
+            <label class="radio-wrapper">
+              <input type="radio" class="radio" name="building" value="1.1" />
+              <div class="title-lite">
+                Вторинний
+                <span class="note">+10% до вартості</span>
+              </div>
+            </label>
+          </div>
+          <!-- // Мобілна адаптивність -->
+
+          <!-- Кількість кімнат -->
+          <div class="calc-section">
+            <label class="checkbox-wrapper title-bold section-title">
+              Кількість кімнат
+            </label>
+            <div class="rooms-wrapper">
+              <label class="rooms-label">
+                <input
+                  class="rooms-radio-real"
+                  type="radio"
+                  name="rooms"
+                  value="0.8"
+                />
+                <span class="rooms-radio-fake">C</span>
+              </label>
+
+              <label class="rooms-label">
+                <input
+                  class="rooms-radio-real"
+                  type="radio"
+                  name="rooms"
+                  value="1"
+                />
+                <span class="rooms-radio-fake">1</span>
+              </label>
+
+              <label class="rooms-label">
+                <input
+                  class="rooms-radio-real"
+                  type="radio"
+                  name="rooms"
+                  value="1"
+                  checked
+                />
+                <span class="rooms-radio-fake">2</span>
+              </label>
+
+              <label class="rooms-label">
+                <input
+                  class="rooms-radio-real"
+                  type="radio"
+                  name="rooms"
+                  value="1.05"
+                />
+                <span class="rooms-radio-fake">3</span>
+              </label>
+
+              <label class="rooms-label">
+                <input
+                  class="rooms-radio-real"
+                  type="radio"
+                  name="rooms"
+                  value="1.05"
+                />
+                <span class="rooms-radio-fake">4</span>
+              </label>
+
+              <label class="rooms-label">
+                <input
+                  class="rooms-radio-real"
+                  type="radio"
+                  name="rooms"
+                  value="1.05"
+                />
+                <span class="rooms-radio-fake">5</span>
+              </label>
+            </div>
+          </div>
+          <!-- // Кількість кімнат -->
+
+          <!-- Додаткові опції -->
+          <div class="calc-section">
+            <label class="checkbox-wrapper title-bold section-title">
+              Додаткові опції
+            </label>
+            <label class="radio-wrapper">
+              <input type="checkbox" class="radio" name="ceiling" value="1.1" />
+              <div class="title-lite">
+                Натяжна стеля
+                <span class="note">+10% до вартості</span>
+              </div>
+            </label>
+            <label class="radio-wrapper">
+              <input type="checkbox" class="radio" name="walls" value="1.1" />
+              <div class="title-lite">
+                Покраска стін
+                <span class="note">+10% до вартості</span>
+              </div>
+            </label>
+            <label class="radio-wrapper">
+              <input type="checkbox" class="radio" name="floor" value="1.1" />
+              <div class="title-lite">
+                Тепла підлога
+                <span class="note">+10% до вартості</span>
+              </div>
+            </label>
+          </div>
+          <!-- // Додаткові опції -->
+
+          <!-- Вартість ремонту -->
+          <div class="calc-price">
+            <div class="calc-price-title">Вартість ремонту:</div>
+            <div class="calc-price-value">
+              <span id="total-price">0</span>
+              гривень
+            </div>
+          </div>
+          <!-- // Вартість ремонту -->
+        </form>
+      </div>
+    </main>
+
+    <script src="js/main-02.js"></script>
+  </body>
+</html>
